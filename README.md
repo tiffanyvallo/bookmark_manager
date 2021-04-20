@@ -94,3 +94,30 @@ rspec
 ```
 rubocop
 ```
+
+### To Insert into table
+
+```
+INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com');
+```
+```
+INSERT INTO 
+    links (url, name)
+VALUES
+    (1,'http://www.makersacademy.com'),
+    (2,'http://askjeeves.com'),
+    (3,'http://twitter.com'),
+    (4,'http://www.google.com');
+```
+### To view table
+```
+bookmark_manager=# SELECT * FROM bookmarks;
+```
+### To delete a row from the table
+```
+DELETE FROM bookmarks WHERE url = 'http://www.twitter.com';
+```
+### To update a value from a row in the table
+```
+UPDATE bookmarks SET url = 'http://www.destroyallsoftware.com' WHERE url = 'http://www.askjeeves.com';
+```
