@@ -1,6 +1,46 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/tiffanyvallo/Makers/Projects/bookmark_manager/app.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/tiffanyvallo/Makers/Projects/bookmark_manager/lib/bookmark.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          16,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/tiffanyvallo/Makers/Projects/bookmark_manager/spec/bookmark_spec.rb": {
         "lines": [
           1,
@@ -9,21 +49,8 @@
           1,
           1,
           1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/tiffanyvallo/Makers/Projects/bookmark_manager/lib/bookmark.rb": {
-        "lines": [
           1,
           1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          2,
           null,
           null,
           null
@@ -49,6 +76,6 @@
         ]
       }
     },
-    "timestamp": 1618855182
+    "timestamp": 1618936724
   }
 }

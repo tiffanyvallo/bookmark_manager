@@ -121,3 +121,11 @@ DELETE FROM bookmarks WHERE url = 'http://www.twitter.com';
 ```
 UPDATE bookmarks SET url = 'http://www.destroyallsoftware.com' WHERE url = 'http://www.askjeeves.com';
 ```
+
+### Accessing the database from irb using pg
+connection = PG.connect(dbname: 'bookmark_manager')
+result = connection.exec('SELECT * FROM bookmarks')
+result.each { |bookmark| p bookmark }
+We created a connection using pg from database so that we can use Ruby coding with the connection = ...
+The .exec is letting us run the postgres code ('SELECT ...) from our ruby irb
+Result.each is the ruby code to be able to puts our urls from the database.

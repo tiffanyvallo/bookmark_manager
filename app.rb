@@ -3,9 +3,9 @@ require 'sinatra/reloader'
 require './lib/bookmark.rb'
 
 class BookmarkManager < Sinatra::Base
-  configure :development do
-    register Sinatra::Reloader
-  end
+  # configure :development do
+  #   register Sinatra::Reloader
+  # end
 
   get '/' do
     erb :index
