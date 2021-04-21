@@ -129,3 +129,14 @@ result.each { |bookmark| p bookmark }
 We created a connection using pg from database so that we can use Ruby coding with the connection = ...
 The .exec is letting us run the postgres code ('SELECT ...) from our ruby irb
 Result.each is the ruby code to be able to puts our urls from the database.
+
+### Creating a test database
+To call the database
+```
+psql bookmark_manager_test
+```
+```
+$> psql
+admin=# CREATE DATABASE "bookmark_manager_test";
+admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+```

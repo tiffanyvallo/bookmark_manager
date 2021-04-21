@@ -1,5 +1,14 @@
 require 'simplecov'
 require 'simplecov-console'
+require_relative './setup_test_database'
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+# For accurate test coverage measurements, require your code AFTER 'SimpleCov.start'
+ENV['ENVIRONMENT'] = 'test'
+# ENV['RACK_ENV'] = 'test'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -8,14 +17,11 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-# For accurate test coverage measurements, require your code AFTER 'SimpleCov.start'
-
-ENV['RACK_ENV'] = 'test'
-
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
 
 RSpec.configure do |config|
   config.after(:suite) do
