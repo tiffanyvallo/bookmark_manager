@@ -14,4 +14,10 @@ describe Bookmark do
       expect(bookmarks).to include 'http://www.google.com'
     end
   end
+  describe '#create' do
+    it 'can add a bookmark into the database' do
+      Bookmark.create(url: 'https://www.youtube.com')
+      expect(Bookmark.all).to include 'https://www.youtube.com'
+    end
+  end
 end

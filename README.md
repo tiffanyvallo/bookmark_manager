@@ -7,44 +7,44 @@ So that I can access websites I regularly visit
 I'd like to see list of saved bookmarks
 ```
 
+### User Story 2
+```
+As a web user
+So that I can update my liost of bookmarks
+I would like to add a bookmark to my current list.
+```
+
 #### Domain Model
 
 
 | Nouns   | Verbs     |
 |---------|-----------|
-|Bookmarks| Show list |
-|List     |           |
+|Bookmarks| Show list, add to list |
 
 
 | Nouns   | Property/ Owner|
 |---------|-----------     |
 |Bookmarks| Owner          |
-|List     | Owner          |
+|Bookmark |Property of Bookmarks|
 
 
 | Actions  | Owned by?  |
 |--------- |----------- |
-|print_list| List       |
+|all   | Bookmarks       |
+|crreate| Bookmarks |
 
 
 
 | Actions  |Property it reads or changes |
 |--------- |-----------                  |
-|print_list| @bookmark_list              |
+|all | @bookmarks              |
+|create | @bookmark |
 
 
 |Class     | Bookmark    |
 |--------- | ----------- |
-|Properties| @url, @title|
-|Actions   | initialize  |
-
-
-
-Class     | List| 
----------|----------|
- Properties |  @bookmark_list | 
- Actions | print_list | 
-
+|Properties| @bookmarks, @bookmark |
+|Actions   | all, create|
 
 #### Diagram planning: 
 * REQUEST: client visits /bookmarks (get request) (client --> controller/server)

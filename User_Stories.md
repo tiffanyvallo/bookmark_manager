@@ -17,3 +17,8 @@ Specification:
    As a web user
    So that I can access websites I regularly visit
    I'd like to see list of saved bookmarks
+
+2. Add new bookmarks
+   As a web user
+   So that I can update my liost of bookmarks
+   I would llike to add a bookmark to my current list.
