@@ -60,6 +60,15 @@ I would like to add a bookmark to my current list.
   
   ![user_story_1.png](./public/images/user_story_1.png)
 
+#### Domain Modelling 
+```
+╔════════════╗         .all         ╔════════════╗  SELECT * FROM bookmarks; ╔════════════╗
+║            ║--------------------->║            ║-------------------------->║            ║
+║ Controller ║ [array of bookmarks] ║  Bookmark  ║      {result object}      ║  Database  ║
+║            ║<---------------------║            ║<--------------------------║            ║
+╚════════════╝                      ╚════════════╝                           ╚════════════╝
+```
+
 ## How to use
 ### To set up the project
 Clone this repository and then run:

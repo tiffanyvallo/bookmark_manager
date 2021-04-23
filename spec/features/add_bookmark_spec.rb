@@ -1,9 +1,10 @@
-feature 'adding a bookmark' do
-  scenario 'add a bookmark to current list' do
+feature 'Adding a new bookmark' do
+  scenario 'A user can add a bookmark to Bookmark Manager' do
     visit('/bookmarks/new')
-    fill_in('url', with: 'https://www.youtube.com')
-    click_button('Add bookmark')
-    
-    expect(page).to have_content 'https://www.youtube.com'
+    fill_in('url', with: 'http://www.youtube.com')
+    fill_in('title', with: 'Youtube')
+    click_button('Add Bookmark')
+
+    expect(page).to have_link('Youtube', href: 'http://www.youtube.com')
   end
 end
