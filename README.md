@@ -59,6 +59,10 @@ I would like to add a bookmark to my current list.
   3. a bookmark view
   
   ![user_story_1.png](./public/images/user_story_1.png)
+  User Story 1 diagram
+
+  ![user_story_2.png](./public/images/user_story_2.png)
+  User Story 2 diagram
 
 #### Domain Modelling 
 ```
